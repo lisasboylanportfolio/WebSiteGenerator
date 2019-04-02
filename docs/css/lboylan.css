@@ -3,9 +3,11 @@ htmml, body{
   margin:0;
   padding:0;
   background:url("../img/sandstone.jpg");
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;   
   color: white;
-  font-size: 28px;
+  font-size: 26px;
+  font-weight: 300;
+  font-style: normal;  
 }
 
 a{
@@ -90,6 +92,9 @@ h1.table_header{
 .right_col_msg{
   padding-left: 20px;
   overflow: hidden;
+  font-family: 'Cormorant | Handgloves', sans-serif;
+  font-size: 24px;  
+  color: white;  
 }
 
 .titled_table{
@@ -137,4 +142,8 @@ h1.table_header{
   margin-top: 35px;
   background-image: url('../img/rocks.jpeg');
   background-size: 100%;  
+}
+
+.content_main{
+  color:white;
 }

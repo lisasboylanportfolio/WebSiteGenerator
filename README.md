@@ -1,5 +1,0 @@
-
-
-Static Web Site Generator
-
-
