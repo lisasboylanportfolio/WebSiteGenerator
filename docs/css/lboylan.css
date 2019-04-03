@@ -5,7 +5,7 @@ htmml, body{
   background:url("../img/sandstone.jpg");
   font-family: 'Raleway', sans-serif;   
   color: white;
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 300;
   font-style: normal;  
 }
@@ -137,13 +137,25 @@ h1.table_header{
 
 /* vertical line */
 .vl {
-  height: 15px;
+  height: 25px;
   width: 100%;
   margin-top: 35px;
   background-image: url('../img/rocks.jpeg');
-  background-size: 100%;  
+  background-size: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .content_main{
-  color:white;
+  color:black;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.indent_content{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;   
 }
