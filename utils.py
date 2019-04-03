@@ -5,7 +5,7 @@ import os.path
 from jinja2 import Template
 from shutil import copyfile
 
-DEBUG = True
+DEBUG = False
 
 
 #
@@ -254,4 +254,4 @@ def new(content_dir, basefile):
             print("                        {{new_content}}         ")
             print("\nOnce you have completed entering your content, run:")
             print("         python3 manage.py build")
-            print("and your web page will automaticall be generated.\n\n")        
+            print("and your web page will automaticall be generated.\n\n")
