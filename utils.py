@@ -3,7 +3,6 @@ import glob
 import re
 import os.path
 from jinja2 import Template
-from shutil import copyfile
 
 DEBUG = False
 
