@@ -13,8 +13,10 @@ To run:
     pipenv shell
     pipenv install jinja2
     python [build | new]    where:
-                                new: generates page templates and instructs how to complete them
-                                build: builds site producing *.html pages and storeing them to docs/*.html
+                                new: add new content. Generates page templates and instructs how to complete them
+                                build: builds site producing *.html pages and storing them to docs/*.html
+                                usage: explains program usage and arguements
+
     to view web site:
         drop docs/index.html into browser
         

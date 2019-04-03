@@ -7,7 +7,7 @@ def usage():
         
     # Allow user to initiate with arguements
     print("manage.py: A web site generator.")
-    print(" Usage: python3 manage.py build|new")
+    print(" Usage: python3 manage.py build|new|usage")
     print("Where:")
     print("build: generate an existing site ")
     print("new: add new content")
@@ -32,27 +32,23 @@ def main():
 
     if utils.DEBUG:    
         print("utils.DEBUG in main")
+        print("DEBUG: manage.py:main().sys.argv=:", sys.argv)        
         
-    # Remove old html files from output directory ./docs    
-    if utils.cleanDir(output_dir):
-
-        # Allow user to initiate with arguements
-        if utils.DEBUG:
-            print("DEBUG: manage.py:main().sys.argv=:", sys.argv)
-            
-        # Check Usage
-        if len(sys.argv) ==  2:
-            arg1 = sys.argv[1]            
-            if arg1 == 'build' or arg1 == 'new':
-                if utils.cleanDir(output_dir):
-                    if arg1 == 'build':
-                        utils.build(content_dir,basefile, output_dir)
-                    else:
-                        new(content_dir, basefile)
+    # Check Usage
+    if len(sys.argv) ==  2:
+        arg1 = sys.argv[1]            
+        if arg1 == 'build' or arg1 == 'new':
+            if utils.cleanDir(output_dir):
+                if arg1 == 'build':
+                    utils.build(content_dir,basefile, output_dir)
+                else:
+                    utils.new(content_dir)
             else:
-                usage()
+                print("Unable to remove old web pages. Confirm docs/ permissions are properly set.")
         else:
             usage()
+    else:
+        usage()
 
 
 

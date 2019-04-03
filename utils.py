@@ -22,6 +22,7 @@ def cleanDir(directory):
     # Get a list of all the file paths that end with .html from the directory
     fileList = glob.glob(directory + "/*.html")
     if DEBUG:
+        print("DEBUG: utils.py.cleanDir().directory=", directory)         
         print("DEBUG: utils.py.cleanDir().fileList=", fileList) 
     if fileList == None or fileList == []:
         if DEBUG:
@@ -187,6 +188,23 @@ def render(cdir,odir, basefile, prefixes):
 
 
 #
+# Create templates for new content
+#
+def createTemplate(content_dir, name, quote):
+    if DEBUG:
+        print("utils.py.createTemplate().path=", content_dir + name + '_main.html')
+
+    if (os.path.exists(content_dir + name + '_main.html')):
+        print("That file alredy exists. Pease choose a different name")
+        return False
+    else:
+        open(content_dir + name + "_main.html", 'a').close()
+        if quote == 'y':
+            open(content_dir + name + "_msg.html", 'a').close()
+        return True
+
+
+#
 # Dynamically generate web pages
 #
 def build(content_dir,basefile, output_dir):
@@ -222,7 +240,7 @@ def build(content_dir,basefile, output_dir):
 #   TODO: can reduce code by adding grammer functionalit to make word plural or not
 #       ex template vs templates
 #
-def new(content_dir, basefile):
+def new(content_dir):
     name=""
     quote=""
 
@@ -233,25 +251,22 @@ def new(content_dir, basefile):
         print("Would you like to include a quote or short text with your content? (must be all alphanumeric),")
         quote=input("Enter 'y' or 'n': ")
         
-    if (createTemplate(content_dir, basefile, name, quote)):
+    if (createTemplate(content_dir, name, quote)):
         if quote=='y':
             print("Templates have been created for your new content.")
             print("The main content should be added to the file:")
             print("         ",  content_dir + name + "_main.html")
-            print("Please replace the following tag with your content:")
-            print("                        {{new_content}}         ")
+            print("Please enter your content into the new file")
             print("Your message can be entered into")
             print("         ",  content_dir + name + "_msg.html")
-            print("No tags need be replaced in the message file. Content can be freely added.")
             print("\nOnce you have completed entering your content, run:")
             print("         python3 manage.py build")
-            print("and your web page will automaticall be generated\n\n")
+            print("and your web page will automatically be generated\n\n")
         else:
             print("A template has been created for your new content.")
             print("The main content should be added to the file:")
             print("         ",  content_dir + name + "_main.html")
-            print("Please replace the following tag with your content:")
-            print("                        {{new_content}}         ")
+            print("Please enter your content into the new file")
             print("\nOnce you have completed entering your content, run:")
             print("         python3 manage.py build")
             print("and your web page will automaticall be generated.\n\n")
