@@ -1,4 +1,4 @@
-Web Site Generator
+# Static Website Generator
 Built using:
     python
     jinja2
