@@ -32,7 +32,7 @@ To run:
                                 usage: explains program usage and arguements
 
 
-    To view web site:
+To view web site:
     
         drop docs/index.html into browser
         
