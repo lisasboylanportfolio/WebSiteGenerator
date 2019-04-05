@@ -1,5 +1,6 @@
 # Static Website Generator
-The application generates additional pages to a static website
+The application generates additional pages for a static website.
+With small modifications, it can be used to by an application to dynamically generate the addition of blog pages or other information to a website.
 
 
 Built using:
@@ -12,11 +13,6 @@ Built using:
     
     HTML 5
     
-
-HOW TO USE:
-This software is desinged to dynamically add pages to the existing web application (my profile).
-With small modifications, it can be used to by an application to dynamically generate the addition of blog pages to a website.
-
 
 To run:
 
