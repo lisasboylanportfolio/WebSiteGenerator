@@ -1,4 +1,7 @@
 # Static Website Generator
+The application generates additional pages to a static website
+
+
 Built using:
 
     python
