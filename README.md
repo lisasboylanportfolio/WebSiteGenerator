@@ -5,11 +5,11 @@ With small modifications, it can be used to by an application to dynamically gen
 
 Built using:
 
-    python
+    Python
     
-    jinja2
+    Jinja2
     
-    css
+    CSS
     
     HTML 5
     
