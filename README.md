@@ -31,6 +31,8 @@ To run:
                                 
                                 usage: explains program usage and arguements
 
-    to view web site:
+
+    To view web site:
+    
         drop docs/index.html into browser
         
